@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keyword" content="Portfolio, html, annus sadik hasan">
+    <meta name="description" content="annus sadik hasan is a softwer developer">
+    <meta name="author" content="sadik hasan">
     <title>Text my program & html page</title>
+
+    <!-- font-awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="
+    sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
+    rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(222, 222, 222);
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
 </head>
 <body>
     Wellcom ot  portfleo
        
       <!--Section: navbar-->
+       <header>
         <nav>
-           <ul>
-            
-            <li><a href="#about">About me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#project">My Projects</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-           </ul>
+            <ul>
+             
+             <li><a href="#about">About me</a></li>
+             <li><a href="#skills">Skills</a></li>
+             <li><a href="#project">My Projects</a></li>
+             <li><a href="#contact">Contact Me</a></li>
+            </ul>
+         </nav>
+       </header>
 
-        </nav>
 
-
- <!--Section: intro-->
-    <header id="intro">
+       <main>
+        <!--Section: intro-->
+    <section id="intro">
         <h1>Annus Sadik hasan</h1>
          <p><em>Web developerand Computer Sceience Student</em></p>
          <a href="https://www.youtube.com/@travelmaster7884">
@@ -30,7 +52,7 @@
          </a>
          
          <hr>
-    </header>
+    </section>
 
      
 
@@ -58,19 +80,40 @@
             <tbody>
                 <tr>
                     <td>HTML</td>
-                    <td>Expert</td>
+                    <td rowspan="2">Expert</td>
                 </tr>
                 <tr>
                     <td>CSS</td>
-                    <td>Expert</td>
+                    
                 </tr>
                 <tr>
                     <td>JavaScript</td>
                     <td>Intermediate</td>
                 </tr>
             </tbody>
-        
-           </table>
+        </table>
+
+        <div>
+            <h3>Skill Progress</h3>
+            <div>
+              <label for="htmlProgress">HTML</label>
+            <progress id="htmlProgress" value="90" max="100">90%</progress>
+            </div>
+            <div>
+              <label for="cssProgress">CSS</label>
+            <progress id="cssProgress" value="85" max="100">85%</progress>
+            </div>
+            <div>
+              <label for="jsProgress">JavaScript</label>
+            <progress id="jsProgress" value="75" max="100">75%</progress>
+            </div>
+        </div>
+
+        <div>
+            <h3>Experince Level</h3>
+            <label for="experinceLevel">Experince:</label>
+            <meter id="experinceLevel" min="0" max="10" value="5">2 years</meter>
+        </div>
     </section>
       
     <!--Section: projects-->
@@ -84,46 +127,161 @@
         </ol>
     </section>
 
+      
+
   <!--Section: Contact-->
     <section id="contact">
         <h2>Contact me</h2>
-        <form>
+        <form action="https://formspree.io/f/mzzpqgly"
+        method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div>
+                    <label for="name">Name :</label> 
+                <input type="text" id="name" name="name"
+                required>
+                </div>
+    
+                <div>
+                    <label for="email">Email :</label> 
+                    <input type="email" id="email" name="email"
+                    required>
+                   </div>
+    
+                   <div>
+                    <label for="age">Age :</label> 
+                    <input type="number" id="age" name="age"
+                    min="18" mix="60" required>
+                   </div>
+            </fieldset>
+
             <div>
-                <label for="name">Name :</label> 
-            <input type="text" id="name" name="name"
+                <label for="favoprite">Favoprite Color :</label> 
+            <input type="color" id="favoprite" name="favoprite"
+            value="#fff000"
             required>
             </div>
 
-           <div>
-            <label for="email">Email :</label> 
-            <input type="email" id="email" name="email"
+            <div>
+                <label for="programming">
+                    Numbar of years learning web development  :</label> 
+            <input list="languages"
+            id="programming" 
+            name="programming"
             required>
+
+            <datalist id="languages">
+                <option value="C">
+                <option value="C++">
+                <option value="Python">
+                <option value="JavaScript">
+            </datalist>
+            </div>
+
+            <div>
+                <label for="experience">
+                    favourite programming  :</label> 
+            <input type="range" 
+            id="experience" 
+            name="experience"
+            min="0" max="5"
+            required>
+            </div>
+
+          
+
+           
+
+           <div>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website"
+            pattern="http?://.+">
+           </div>
+
+           <div>
+            <label for="image">Uplode Image:</label>
+            <input type="file" id="image" name="image"
+            accept="image/*">
            </div>
 
             <div>
-                <label for="meassage">Meassage :</label> 
-            <input type="meassage" id="meassage" name="meassage"
-            cols="20" rows="10">
+                <label for="subject">Subject:</label> 
+                <select name="subject" id="subject">
+                <option value="Inquiry">Inquiry</option>
+                <option value="feedback">Feedback</option>
+                <option value="job">Job opportunity</option>
+            </select>
             </div>
+
+            <div>
+                <label for="meassage">Meassage:</label> 
+                <textarea name="meassage" id="meassage" 
+                cols="20" rows="10"></textarea>
+                
+               </div>
 
             <button type="submit">Submit</button>
             <button type="reset">Clear</button>
             
         </form>
     </section>
+       </main>
+
+
+ 
 
 
 
 
 
-   <!--Section: footer-->
+   <!--footer-->
        <footer>
         <p>copyright reserved by &copy;Sadik-hasan</p>
         <p>Developed with &hearts;</p>
         <a href="tel:+8801308010363"> © Call me</a>
         <a href="mailto:annussadikhasan@gmail.com">Email</a>
        
-       </footer>
+        <div>
+            <h3>Follow Me</h3>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/adif.hassan.5/"target="_blank" >        
+                    <i class="fa-brands fa-facebook"></i>
+                    facebook page
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@travelmaster7884"target="_blank" >        
+                    <i class="fa-brands fa-youtube"></i>
+                    Youtube channel
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/annus-sadik-hasan-6686a0223/"target="_blank" >        
+                    <i class="fa-brands fa-linkedin"></i>
+                    Linkedin 
+                </a>
+            </li>
+        </li>
+        <li>
+            <a href="https://github.com/Sadik-hasan"target="_blank" >        
+                <i class="fa-brands fa-github"></i>
+                github
+            </a>
+        </li>
+        </ul>
+        </div>
+
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52955.71919839133!2d88.
+            98488044999996!3d22.583736199999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a01e317685bb00f%3A0xfff8744d60439f8e!
+            2sDebhata!5e1!3m2!1sen!2sbd!4v1726244693681!5m2!1sen!2sbd" 
+            title="home map"
+            width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+      </footer>
 
 </body>
 </html>
